@@ -24,4 +24,33 @@ using provider from react-redux
 
 
 ---------------- react redux tutorial --------------------------------
+
+
+
+- know grammer of  ECMAScript 2015 
+- Component ( a JXS(like javascript mixed with html syntax) wrapper of Html element with state, props)
+	- Component life cycle 
+	-> constructor()
+	-> componentWillMount()
+	-> render()
+	-> componentDidMount()
+    -> componentWillUnmount()
+	
+- Event and Listener, react wrapps html's event and listenr but almost same
+
+- the problem/limit of state and props 
+
+- react-redux is used to solve this problem
+
+- Smart Component/Dumb Component/combinedReducers/middleware/async
+
+
 https://github.com/stewchicken/academind-redux-tutorial 
+
+https://reactjs.org/tutorial/tutorial.html
+
+
+
+
+
+

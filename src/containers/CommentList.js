@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import CommentList from '../components/CommentList'
-import { initComments, deleteComment } from '../reducers/commentsReducer'
+import {deleteComment,initComments} from '../actions/commentsAction'
 
 class CommentListContainer extends Component {
     // TODOS: change to other spelling

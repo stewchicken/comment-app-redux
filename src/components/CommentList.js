@@ -12,7 +12,7 @@ export default class CommentList extends Component {
     comments: []
   }
 
-  handleDeleteComment (index) {
+  handleDeleteComment(index) {
     if (this.props.onDeleteComment) {
       this.props.onDeleteComment(index)
     }
