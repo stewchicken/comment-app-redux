@@ -6,16 +6,15 @@ import CommentApp from './containers/CommentApp'
 import commentsReducer from './reducers/commentsReducer'
 import logger from "redux-logger";
 import './index.css'
-import promise from "redux-promise-middleware";
+import promiseMiddleware from 'redux-promise-middleware';
 //use an asynchronous action
 //npm install redux-thunk --save
 import thunk from "redux-thunk";
 //you could also write your own createStore function and put it into seperate file e.g store.js
-
 //createStore with reducder, store's state(here empty), applyMiddleware
 const store = createStore(
   commentsReducer,
-  {}, applyMiddleware(thunk))
+  {}, applyMiddleware(promiseMiddleware()))
 
 ReactDOM.render(
   <Provider store={store}>

@@ -10,7 +10,6 @@ export default function (state, action) {
     state = { comments: [] }
   }
 
-  console.log("typeof: " + typeof action + " action = " + action)
   switch (action.type) {
     case INIT_COMMNETS:
       // 初始化评论
@@ -21,13 +20,14 @@ export default function (state, action) {
         comments: [...state.comments, action.comment]
       }
       //for promise middleware must append with _FULFILLED
-   // case DELETE_COMMENT+'_FULFILLED':
-   case DELETE_COMMENT:   
+   case DELETE_COMMENT+'_FULFILLED':
+   //case DELETE_COMMENT:   
+   console.log("######action.index####: " + action.payload)
       // 删除评论
       return {
         comments: [
-          ...state.comments.slice(0, action.commentIndex),
-          ...state.comments.slice(action.commentIndex + 1)
+          ...state.comments.slice(0, action.payload),
+          ...state.comments.slice(action.payload + 1)
         ]
       }
     default:

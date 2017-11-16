@@ -6,10 +6,20 @@ export function deleteComment(commentIndex) {
         setTimeout(() => {
             resolve({ type: DELETE_COMMENT, commentIndex });
         }, 2000);
-    })
-*/
-    //return { type: DELETE_COMMENT, commentIndex }
+    })*/
 
+    return {
+        type: DELETE_COMMENT,
+        //payload is default keyname for promise middle where
+        payload: new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve(commentIndex);
+            },2000);
+        })
+    };
+
+    //return { type: DELETE_COMMENT, commentIndex }
+    /*
     return dispatch => {
         //simulate a server which takes a couple of seconds
         setTimeout(() => {
@@ -18,7 +28,7 @@ export function deleteComment(commentIndex) {
                 commentIndex
             });
         }, 2000);
-    }
+    }*/
 }
 
 export function initComments(comments) {
