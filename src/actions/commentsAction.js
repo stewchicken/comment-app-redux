@@ -10,7 +10,7 @@ export function deleteComment(commentIndex) {
 
     return {
         type: DELETE_COMMENT,
-        //payload is default keyname for promise middle where
+        //payload is default keyname for promise middlewhere
         payload: new Promise((resolve, reject) => {
             setTimeout(() => {
                 resolve(commentIndex);

@@ -12,10 +12,10 @@ export default function (state, action) {
 
   switch (action.type) {
     case INIT_COMMNETS:
-      // 初始化评论
+      // initialize comment
       return { comments: action.comments }
     case ADD_COMMENT: // for promise middleware append with _FULFILLED
-      // 新增评论
+      // add comment
       return {
         comments: [...state.comments, action.comment]
       }
@@ -23,7 +23,7 @@ export default function (state, action) {
    case DELETE_COMMENT+'_FULFILLED':
    //case DELETE_COMMENT:   
    console.log("######action.index####: " + action.payload)
-      // 删除评论
+      // delete comment
       return {
         comments: [
           ...state.comments.slice(0, action.payload),

@@ -28,7 +28,7 @@ using provider from react-redux
 
 
 - know grammer of  ECMAScript 2015 
-- Component ( a JXS(like javascript mixed with html syntax) wrapper of Html element with state, props)
+- Component ( a JXS(like javascript mixed with html syntax) wrapper of Html element with state, props and functions)
 	- Component life cycle 
 	-> constructor()
 	-> componentWillMount()
